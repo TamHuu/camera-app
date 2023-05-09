@@ -1,5 +1,5 @@
-export const data = {
-    "products": [
+export const ListProducts = ()=>{
+    const data = [
         {
             "id": 1,
             "name": "iPhone 12 Pro Max 128GB",
@@ -108,7 +108,7 @@ export const data = {
             "price": 5590000,
             "salePrice": 5300000,
             "type": "vivo",
-            "images": "https://cdn.tgdd.vn/Products/Images/42/228950/vivo-y51-bac-600x600-600x600.jpg",
+            "image": "https://cdn.tgdd.vn/Products/Images/42/229885/oppo-a15-black-600x600-2-600x600.jpg",
             "rating": 5,
             "numReviews": 1,
             "reviews": [
@@ -393,4 +393,7 @@ export const data = {
         }
 
     ]
+
+    return data
 }
+    
