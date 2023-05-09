@@ -1,49 +1,51 @@
-import React from "react";
-import SwiperCore, { EffectCoverflow, Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import "./styles.css";
-import { Box } from "@mui/material";
+import React from 'react';
+import styled from 'styled-components';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import { useMediaQuery } from 'react-responsive';
+import { ListProducts } from '../data';
 
-SwiperCore.use([EffectCoverflow, Pagination]);
-// if you want to use array
-const slide_img = [
-  "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/344682444_1230646241157191_6494314129047568869_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=oZSs5hQXqboAX94zogv&_nc_ht=scontent.fsgn5-14.fna&oh=00_AfA3PvLzqmvIMhKa1f9rM81tRHGVhOIMPGEq4FbXegnavQ&oe=64570351",
-  "https://swiperjs.com/demos/images/nature-2.jpg",
-  "https://swiperjs.com/demos/images/nature-3.jpg",
-  "https://swiperjs.com/demos/images/nature-4.jpg",
-  "https://swiperjs.com/demos/images/nature-5.jpg",
-  "https://swiperjs.com/demos/images/nature-6.jpg",
-  "https://swiperjs.com/demos/images/nature-7.jpg",
-  "https://swiperjs.com/demos/images/nature-8.jpg",
-  "https://swiperjs.com/demos/images/nature-9.jpg",
-];
+SwiperCore.use([Navigation, Pagination]);
 
-const App = () => {
+const Wrapper = styled.div`
+  padding: 20px;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: white;
+  }
+`;
+
+export default function SwiperProduct() {
+  const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+
+  const [slides, setSlides] = React.useState([]);
+  React.useEffect(() => {
+    setSlides(ListProducts());
+  }, []);
+
   return (
-    <Box>
+    <Wrapper>
       <Swiper
-      spaceBetween={2}
-      slidesPerView={3}
-     pagination={{
-      type: "fraction",
-    }}
-    navigation={true}
-    modules={[Pagination, Navigation]}
-        className="mySwiper"
+        navigation
+        pagination={{ clickable: true }}
+        slidesPerView={isSmallScreen ? 1 : 4}
+        spaceBetween={isSmallScreen ? 0 : 20}
       >
-    
-        {slide_img.map((img, i) => {
-          return (
-            <SwiperSlide key={i}>
-              <img src={img} alt="" />
-            </SwiperSlide>
-          );
-        })}
+        {slides.map(slide => (
+          <SwiperSlide key={slide.id}>
+            <div >
+           
+             <img src={slide.image} alt='alt'/>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    </Box>
+    </Wrapper>
   );
-};
-
-export default App;
+}

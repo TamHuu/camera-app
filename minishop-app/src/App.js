@@ -6,6 +6,7 @@ import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import { AppBar} from './Layout';
+import SwiperProduct from './Layout/SwiperProduct';
 
 
 
@@ -14,7 +15,7 @@ function App() {
     <>
        <Router>
     <AppBar/>
-
+<SwiperProduct/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList />} />

@@ -166,7 +166,7 @@ export default function Appbar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            Camera Trung Kien
+      Cellphone
           </Typography>
           <Search>
             <SearchIconWrapper>
