@@ -6,7 +6,7 @@ import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import { AppBar} from './Layout';
-import SwiperProduct from './Layout/SwiperProduct';
+
 
 
 
@@ -15,11 +15,11 @@ function App() {
     <>
        <Router>
     <AppBar/>
-<SwiperProduct/>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/products-detail" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
