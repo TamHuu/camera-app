@@ -5,11 +5,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { useMediaQuery } from 'react-responsive';
 import { ListProducts } from '../data';
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import "./styles.css";
+import { Mousewheel, FreeMode, Autoplay } from "swiper";
+
+// import required modules
 
 SwiperCore.use([Navigation, Pagination]);
 
 const Wrapper = styled.div`
-  padding: 20px;
+  padding: 20px 0;
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -32,10 +39,19 @@ export default function SwiperProduct() {
   return (
     <Wrapper>
       <Swiper
+           loop={true}
+           modules={[Mousewheel, FreeMode, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         slidesPerView={isSmallScreen ? 1 : 4}
         spaceBetween={isSmallScreen ? 0 : 20}
+        speed={3000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false
+          // waitForTransition: false
+        }}
+        
       >
         {slides.map(slide => (
           <SwiperSlide key={slide.id}>
