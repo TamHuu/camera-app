@@ -138,7 +138,7 @@ export default function Appbar() {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Notificatioashjdhuasdaysdyasguns</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton

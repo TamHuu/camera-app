@@ -20,7 +20,7 @@ function Help() {
   React.useEffect(() => {
     setPayment(ListPaymentMethods());
   }, []);
-  console.log("data img", Payment);
+  // console.log("data img", Payment);
   return (
     <>
       <Typography variant="h5" gutterBottom>
@@ -58,7 +58,7 @@ function InformationPolicy() {
   React.useEffect(() => {
     setPolicy(ListInformationPolicy());
   }, []);
-  console.log("data Policy", Policy);
+  // console.log("data Policy", Policy);
   return (
     <>
       <Typography variant="h5" gutterBottom>
@@ -85,7 +85,7 @@ function InformationServices() {
   React.useEffect(() => {
     setServices(ListInformationServices());
   }, []);
-  console.log("data Services", Services);
+  // console.log("data Services", Services);
   return (
     <>
       <Typography variant="h5" gutterBottom>
@@ -112,12 +112,12 @@ function Connect() {
   React.useEffect(() => {
     setConnect(ListConnect());
   }, []);
-  console.log("data img", Connect);
+  // console.log("data img", Connect);
   const [Website, setWebsite] = React.useState([]);
   React.useEffect(() => {
     setWebsite(ListWebsite());
   }, []);
-  console.log("data img", Website);
+  // console.log("data img", Website);
   return (
     <>
       <Typography variant="h5" gutterBottom>
