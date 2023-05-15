@@ -164,13 +164,13 @@ export default function Appbar() {
               variant="h6"
               noWrap
               component="div"
-              sx={{ display: { xs: "none", sm: "block" } }}
+
             >
               Cellphone
             </Typography>
             <Typography
               component="div"
-              sx={{ display: { xs: "none", sm: "block" } }}
+
             >
               <img
                 width="30"
