@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { useMediaQuery } from 'react-responsive';
-import { ListProducts } from '../data';
+import React from "react";
+import styled from "styled-components";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import { useMediaQuery } from "react-responsive";
+import { ListProducts } from "../../../../data";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -39,8 +39,8 @@ export default function SwiperProduct() {
   return (
     <Wrapper>
       <Swiper
-           loop={true}
-           modules={[Mousewheel, FreeMode, Autoplay]}
+        loop={true}
+        modules={[Mousewheel, FreeMode, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         slidesPerView={isSmallScreen ? 1 : 4}
@@ -48,16 +48,13 @@ export default function SwiperProduct() {
         speed={3000}
         autoplay={{
           delay: 0,
-          disableOnInteraction: false
-          // waitForTransition: false
+          disableOnInteraction: false,
         }}
-        
       >
-        {slides.map(slide => (
+        {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div >
-           
-             <img src={slide.image} alt='alt'/>
+            <div>
+              <img src={slide.image} alt="alt" />
             </div>
           </SwiperSlide>
         ))}

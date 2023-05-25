@@ -6,7 +6,7 @@ import SwiperDetailImage from "./SwiperDetailImage.js/index.js";
 
 function ProductDetail() {
   return (
-    <Container sx={{ py: 3}}>
+    <Container sx={{ py: 3 }}>
       <Grid container spacing={2} alignItems="center">
         <Grid item>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>

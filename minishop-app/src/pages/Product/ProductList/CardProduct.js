@@ -1,5 +1,4 @@
 import {
-
   Box,
   Card,
   CardContent,
@@ -10,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { ListProducts } from "../../data";
+import { ListProducts } from "../../../data";
 import { Link } from "react-router-dom";
 
 const VND = new Intl.NumberFormat("vi-VN", {

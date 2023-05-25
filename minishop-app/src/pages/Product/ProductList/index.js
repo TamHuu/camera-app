@@ -4,22 +4,26 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ImageContainer from "./ImageContainer";
-import CardProduct from "./CardProduct";
-import SwiperProduct from "../../Layout/SwiperProduct";
+import CardProduct from "../ProductList/CardProduct";
+import styled from "styled-components";
+import SwiperProduct from "./Swiper";
 
 const theme = createTheme();
 
+const ContainerImage = styled.div`
+  background-image: url("https://www.apple.com/vn/iphone/home/images/overview/hero/hero_iphone_14__de41900yuggi_large.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+`;
 export default function ProductList() {
-
   return (
     <>
-    <SwiperProduct/>
+      <SwiperProduct />
       <ThemeProvider theme={theme}>
         <CssBaseline />
-
         <main>
-          {/* Hero unit */}
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -49,12 +53,11 @@ export default function ProductList() {
             </Container>
           </Box>
           <Box>
-            <ImageContainer/>
+            <ContainerImage />
           </Box>
-     {/* Danh sách sản phẩm */}
-     <CardProduct/>
+          {/* Danh sách sản phẩm */}
+          <CardProduct />
         </main>
-      
       </ThemeProvider>
     </>
   );

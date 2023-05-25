@@ -1,30 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import ProductList from "./components/ProductList";
-import ProductDetail from "./components/ProductDetail";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import { AppBar } from "./Layout";
-import Footer from "./Layout/Foooter";
-
-
+import Logout from "./pages/Logout/Logout";
+import Cart from "./pages/Cart/Cart";
+import Home from "./pages/Home/Home";
+import Footer from "./components/Footer/Footer";
+import ProductDetail from "./pages/Product/ProductDetail";
+import Header from "./components/Header/Header";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <>
       <Router>
-        <AppBar />
-      
+        {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/products-detail" element={<ProductDetail />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/:id" element={<ProductDetail />} />
         </Routes>
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
