@@ -1,15 +1,18 @@
 import React from "react";
-
+import styles from "./styles.scss";
+import Dropdown from "./Dropdown";
 function Header() {
   return (
     <div className="header bg-dark">
       <div className="container py-3 text-white">
+        {/* topbar */}
         <div className="row ">
           <div className="col md-12 sm-12 lg-12 ">
             Giờ mở cửa: 08:30 - 21:30 các ngày trong tuần
           </div>
         </div>
         <hr />
+        {/* appbar */}
         <div className="row d-flex align-items-baseline ">
           <div className="col-md-2  text-white">
             <img
@@ -62,13 +65,13 @@ function Header() {
                 </div>
               </div>
 
-              <div class="col">
-                <a href="!#" class="position-relative">
-                  <span class="fs-3 ">
-                    <i class="fa-solid fa-cart-shopping"></i>
+              <div className="col">
+                <a href="!!#" className="position-relative">
+                  <span className="fs-3 ">
+                    <i className="fa-solid fa-cart-shopping"></i>
                   </span>
 
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     0
                   </span>
                 </a>
@@ -76,6 +79,9 @@ function Header() {
             </div>
           </div>
         </div>
+        <hr />
+        {/* navigate */}
+        <Dropdown />
       </div>
     </div>
   );
