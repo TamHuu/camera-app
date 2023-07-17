@@ -4,7 +4,7 @@ import Dropdown from "./Dropdown";
 function Header() {
   return (
     <div className="header bg-dark">
-      <div className="container py-3 text-white">
+      <div className="container py-2 text-white">
         {/* topbar */}
         <div className="row ">
           <div className="col md-12 sm-12 lg-12 ">
@@ -69,10 +69,6 @@ function Header() {
                 <a href="!!#" className="position-relative">
                   <span className="fs-3 ">
                     <i className="fa-solid fa-cart-shopping"></i>
-                  </span>
-
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    0
                   </span>
                 </a>
               </div>
