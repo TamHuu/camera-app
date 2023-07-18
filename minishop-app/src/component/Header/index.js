@@ -65,8 +65,8 @@ function Header() {
                 </div>
               </div>
 
-              <div className="col">
-                <a href="!!#" className="position-relative">
+              <div className="col d-flex align-items-center">
+                <a href="!!#" className="position-relative ">
                   <span className="fs-3 ">
                     <i className="fa-solid fa-cart-shopping"></i>
                   </span>
