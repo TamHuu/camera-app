@@ -121,7 +121,6 @@ function Dropdown() {
                   <a
                     className="nav-link disabled text-white"
                     href="2#"
-                    tabindex="-1"
                     aria-disabled="true"
                   >
                     Tuyển dụng
@@ -131,7 +130,6 @@ function Dropdown() {
                   <a
                     className="nav-link disabled text-white"
                     href="2#"
-                    tabindex="-1"
                     aria-disabled="true"
                   >
                     Tin tức
@@ -141,7 +139,6 @@ function Dropdown() {
                   <a
                     className="nav-link disabled text-white"
                     href="2#"
-                    tabindex="-1"
                     aria-disabled="true"
                   >
                     Liên hệ

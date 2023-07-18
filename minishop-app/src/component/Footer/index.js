@@ -9,11 +9,11 @@ export default function Footer() {
         <div className="container">
           <div className="row footer-title">
             <div className="col-md-3 ">
-              <h4 class="title-menu">
+              <h4 className="title-menu">
                 Về chúng tôi
-                <span class="Collapsible__Plus"></span>
+                <span className="Collapsible__Plus"></span>
               </h4>
-              <div class="list-menu hidden-mobile">
+              <div className="list-menu hidden-mobile">
                 <a href="/" title="Trang chủ">
                   Trang chủ
                 </a>
@@ -36,11 +36,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-3">
-              <h4 class="title-menu">
+              <h4 className="title-menu">
                 Về chúng tôi
-                <span class="Collapsible__Plus"></span>
+                <span className="Collapsible__Plus"></span>
               </h4>
-              <div class="list-menu hidden-mobile">
+              <div className="list-menu hidden-mobile">
                 <a href="/" title="Trang chủ">
                   Trang chủ
                 </a>
@@ -63,11 +63,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-3">
-              <h4 class="title-menu">
+              <h4 className="title-menu">
                 Về chúng tôi
-                <span class="Collapsible__Plus"></span>
+                <span className="Collapsible__Plus"></span>
               </h4>
-              <div class="list-menu hidden-mobile">
+              <div className="list-menu hidden-mobile">
                 <a href="/" title="Trang chủ">
                   Trang chủ
                 </a>
@@ -90,11 +90,11 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-md-3">
-              <h4 class="title-menu">
+              <h4 className="title-menu">
                 Về chúng tôi
-                <span class="Collapsible__Plus"></span>
+                <span className="Collapsible__Plus"></span>
               </h4>
-              <div class="list-menu hidden-mobile">
+              <div className="list-menu hidden-mobile">
                 <a href="/" title="Trang chủ">
                   Trang chủ
                 </a>
@@ -119,9 +119,9 @@ export default function Footer() {
           </div>
           <hr />
         </div>
-        <div id="copyright" class="copyright">
-          <div class="container">
-            <div class="wsp">© Bản quyền thuộc về Huu Tam</div>
+        <div id="copyright" className="copyright">
+          <div className="container">
+            <div className="wsp">© Bản quyền thuộc về Huu Tam</div>
           </div>
         </div>
       </div>
