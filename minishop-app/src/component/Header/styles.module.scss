@@ -1,0 +1,46 @@
+.header{
+
+    background-color: black;
+}
+.topbar{
+    
+    height: 40px;
+    display: flex;
+    align-items: center;
+ 
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.header_middle{
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+.header_menu{
+    border-top: 1px solid #474747;
+}
+.block_cart{
+    color: #fff;
+    display: flex;
+    align-items: center;
+ 
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    position: relative;
+}
+@media (max-width: 767px){
+    .topbar {
+        height: initial;
+        padding: 10px 0;
+    }
+    .header_menu{
+        display: none;
+    }
+ 
+}
